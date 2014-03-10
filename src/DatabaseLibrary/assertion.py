@@ -62,7 +62,7 @@ class Assertion(object):
         queryResults = self.query(selectStatement) 
         if queryResults:
             raise AssertionError("Expected to have have no rows from '%s' "
-                                 "but got some rows : %s." % (selectStatement, queryResults))
+                                 "but got some rows" % selectStatement)
 
     def row_count_is_0(self,selectStatement):
         """
